@@ -1,0 +1,19 @@
+{
+  "name": "hackablegame",
+  "version": "1.0.0",
+  "description": "hackable game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperDaichi/HackableGame.git"
+  },
+  "author": "Daichi, Kelly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperDaichi/HackableGame/issues"
+  },
+  "homepage": "https://github.com/SuperDaichi/HackableGame#readme"
+}
