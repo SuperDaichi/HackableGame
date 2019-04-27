@@ -19,7 +19,7 @@
     </head>
     <body></body>
     <script>
-        function toggleSignIn() {
+      function toggleSignIn() {
         if (!firebase.auth().currentUser) {
           // [START createprovider]
           var provider = new firebase.auth.GoogleAuthProvider();
@@ -94,14 +94,14 @@
             var uid = user.uid;
             var providerData = user.providerData;
             // [START_EXCLUDE]
-            console.log('Signed in');
+            alert('Signed in');
             document.getElementById('quickstart-sign-in').textContent = 'Sign out';
             document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
             // [END_EXCLUDE]
           } else {
             // User is signed out.
             // [START_EXCLUDE]
-            console.log('Signed out');
+            alert('Signed out');
             document.getElementById('quickstart-sign-in').textContent = 'Sign in with Google';
             //document.getElementById('quickstart-account-details').textContent = 'null';
             //document.getElementById('quickstart-oauthtoken').textContent = 'null';
