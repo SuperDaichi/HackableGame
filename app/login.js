@@ -2,6 +2,7 @@
      * Function called when clicking the Login/Logout button.
      */
     // [START buttoncallback]
+    alert("TEST!")
     function toggleSignIn() {
         if (!firebase.auth().currentUser) {
           // [START createprovider]

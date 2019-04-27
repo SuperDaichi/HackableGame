@@ -6,7 +6,8 @@ var appServer = express();
 appServer.use(express.static('files'));
 
 appServer.get('*', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname+"/");
+    //res.sendFile(__dirname+"/login.js");
 });
 
 
