@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 ## Hackable Game!
 
 You can code for this game for fun!
@@ -33,3 +35,4 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+>>>>>>> 370621acb513fcdc25bb0e200c2bc2cc276ed8cb
