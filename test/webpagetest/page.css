@@ -1,0 +1,16 @@
+B {
+    font-family: 'Oswald', sans-serif;
+    font-size: 500%;
+  }
+  h1 {
+    font-family: 'Chivo', sans-serif;
+    font-size: 350%;
+  }
+  p {
+    font-family: 'Chivo', sans-serif;
+    font-size: 125%;
+  }
+  body {
+    background: linear-gradient(135deg, orange, orange 60%, cyan);
+  }
+  
