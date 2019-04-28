@@ -11,7 +11,7 @@ ctx.drawImage(charImages, 0, 0);
 let draw = timestamp =>{
     if (!start) start = timestamp;
     var progress = timestamp - start;
-
+    //ctx.drawImage(charImages, 0, 0);
     window.requestAnimationFrame(draw);
 }
 requestAnimationFrame(draw);

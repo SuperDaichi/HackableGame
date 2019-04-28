@@ -17,10 +17,16 @@
         </script>
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     </head>
-    <body></body>
+    <body>
     <script src="login.js">
     </script>
-    <button  class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign in with Google</button>
-    <code id="quickstart-account-details">null</code>
+    <div>
+            <form name="form1" id="id_form1" action="" style="visibility: hidden;">
+                your character name:<input name="textBox1" id="id_name" type="text" value="" />
+
+                <input type="button" value="register" onclick="onSubmit();" />
+            </form>
+        <button  class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in">Sign up with Google</button>
+    </div>
     </body>
     </html> 

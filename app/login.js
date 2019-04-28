@@ -35,9 +35,9 @@ function initApp() {
       // This gives you a Google Access Token. You can use it to access the Google API.
       var token = result.credential.accessToken;
       // [START_EXCLUDE]
-      document.getElementById('quickstart-oauthtoken').textContent = token;
+      //document.getElementById('quickstart-oauthtoken').textContent = token;
     } else {
-      document.getElementById('quickstart-oauthtoken').textContent = 'null';
+      //document.getElementById('quickstart-oauthtoken').textContent = 'null';
       // [END_EXCLUDE]
     }
     // The signed-in user info.
@@ -63,6 +63,7 @@ function initApp() {
   // [END getidptoken]
   // Listening for auth state changes.
   // [START authstatelistener]
+  let userRef;
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
@@ -73,9 +74,23 @@ function initApp() {
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
+    
+      firebase.database().ref('users/'+uid).push({
+      })
+    
+      userRef = firebase.database().ref('users/' + uid);
+      userRef.once('value').then(function(snapshot) {
+        if(!snapshot.val().username){
+          document.getElementById("id_form1").style.visibility="visible"
+        }else{
+          location.href="game1.html";
+        }
+        // ...
+      });
+      
       // [START_EXCLUDE]
-      console.log('Signed in');
-      location.href="game1.html";
+      console.log('Signed in'+user.uid);
+      //location.href="game1.html";
       //document.getElementById('quickstart-sign-in').textContent = 'Sign out';
       //document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
       // [END_EXCLUDE]
@@ -98,3 +113,12 @@ function initApp() {
 window.onload = function() {
   initApp();
 };
+let = onSubmit = ()=>{
+  let name = document.id_form1.id_name.value;
+  if(!name==""){
+    userRef.set({
+      username: name
+    });
+    location.href="game1.html";
+  }
+}
